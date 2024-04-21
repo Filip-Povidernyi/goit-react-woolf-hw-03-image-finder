@@ -66,12 +66,6 @@ class App extends Component {
   };
 
 
-handleOverlayClick = event => {
-  if (event.target === event.currentTarget) {
-    this.closeModal();
-  }
-};
-
   render() {
 
     const { images, loading, modalOpen, selectedImage, showBtn } = this.state;

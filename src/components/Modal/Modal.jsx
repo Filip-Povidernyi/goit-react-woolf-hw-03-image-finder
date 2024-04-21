@@ -16,18 +16,18 @@ export class Modal extends Component {
   };
 
   componentDidMount() {
-    window.addEventListener('keyup', this.handleKeyUp);
+      window.addEventListener('keyup', this.handleKeyUp);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('keyup', this.handleKeyUp);
+      window.removeEventListener('keyup', this.handleKeyUp);
   }
 
   render() {
     const { isOpen, imageUrl } = this.props;
     return (
       <div
-        className={isOpen ? modalStyles.overlay : modalStyles.hidden}
+            className={isOpen ? modalStyles.overlay : modalStyles.hidden}
         onClick={this.handleOverlayClick}
       >
         <div className={modalStyles.modal}>
