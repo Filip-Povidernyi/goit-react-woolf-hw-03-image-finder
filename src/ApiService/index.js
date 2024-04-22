@@ -9,6 +9,5 @@ export const getImages = async (query, page) => {
         `?key=${API_KEY}&q=${query}&image_type=photo&orientation=horizontal&safesearch=true&page=${page}&per_page=12`
     );
     const data = await response.data;
-    console.log(data);
     return data;
 };

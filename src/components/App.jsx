@@ -57,12 +57,11 @@ class App extends Component {
 
   openModal = imageUrl => {
     this.setState({ modalOpen: true, selectedImage: imageUrl });
-    document.body.style.overflow = 'hidden';
+    
   };
 
   closeModal = () => {
     this.setState({ modalOpen: false, selectedImage: '' });
-    document.body.style.overflow = '';
   };
 
 
@@ -78,12 +77,12 @@ class App extends Component {
         {showBtn && (
           <Button onLoadMore={this.loadMoreImages} hasMore={!loading} />
         )}
-        <Modal
+        {modalOpen && <Modal
           isOpen={modalOpen}
           closeModal={this.closeModal}
           imageUrl={selectedImage}
           onOverlayClick={this.handleOverlayClick}
-        />
+        />}
       </div>
     )
   }

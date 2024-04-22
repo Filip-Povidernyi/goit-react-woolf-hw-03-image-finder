@@ -8,7 +8,6 @@ export class Searchbar extends Component {
     }
 
     changeHandler = (e) => {
-        console.log('e.target.value', e.target.value)
         this.setState({ searchQuery: e.target.value })
     }
 
